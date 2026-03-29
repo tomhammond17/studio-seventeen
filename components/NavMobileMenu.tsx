@@ -42,14 +42,14 @@ export default function NavMobileMenu({ links }: { links: NavLink[] }) {
       {open && (
         <div
           id="mobile-menu"
-          className="md:hidden absolute top-full left-0 right-0 border-t border-white/10 bg-bg z-50"
+          className="absolute left-0 right-0 top-full z-50 border-t border-white/10 bg-bg/95 backdrop-blur-2xl md:hidden"
         >
-          <ul className="flex flex-col px-4 py-4 gap-4">
+          <ul className="flex flex-col gap-2 px-5 py-5">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className="font-mono text-sm text-text opacity-60 hover:opacity-100 transition-opacity"
+                  className="block rounded-2xl border border-white/0 px-4 py-3 font-heading text-base text-text-soft transition-colors hover:border-white/10 hover:bg-white/[0.03] hover:text-text"
                   onClick={() => setOpen(false)}
                 >
                   {label}

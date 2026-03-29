@@ -1,11 +1,18 @@
 export default function Footer() {
   return (
-    <footer className="py-8 border-t border-white/5">
-      <div className="mx-auto max-w-content px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p className="text-xs text-text-muted">
-          © 2025 Studio Seventeen
-        </p>
+    <footer className="border-t border-white/5 py-8">
+      <div className="mx-auto flex max-w-content flex-col gap-4 px-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="space-y-1">
+          <p className="font-heading text-sm font-medium uppercase tracking-[0.22em] text-text">
+            Studio Seventeen
+          </p>
+          <p className="max-w-md text-sm text-text-muted">
+            Focused software for engineers and operators working in real-world
+            industrial environments.
+          </p>
+        </div>
         <div className="flex items-center gap-4 text-xs text-text-muted">
+          <span>© 2025 Studio Seventeen</span>
           <a
             href="mailto:hello@studioseventeen.io"
             className="hover:text-text transition-colors"

@@ -4,20 +4,54 @@
 
 :root {
   --max-content-width: 1100px;
+  --bg: #0d0d0d;
+  --bg-elevated: #151413;
+  --line: #262220;
+  --text: #f5f1eb;
+  --text-muted: #9e948a;
+  --accent: #e85d26;
 }
 
 html {
-  background-color: #0a0a0a;
-  color: #E5E5E5;
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-inter), sans-serif;
-  background-color: #0a0a0a;
-  color: #E5E5E5;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(232, 93, 38, 0.18), transparent 0 28rem),
+    radial-gradient(circle at 78% 14%, rgba(255, 255, 255, 0.06), transparent 0 24rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 16rem),
+    var(--bg);
+  color: var(--text);
   min-height: 100vh;
+  position: relative;
 }
 
 * {
   box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.045), transparent),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 84px;
+  background-position: center top, center top;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.48), transparent 80%);
+  opacity: 0.3;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(232, 93, 38, 0.35);
 }

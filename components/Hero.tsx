@@ -2,21 +2,31 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-12 sm:py-16">
       <div className="mx-auto max-w-content px-6">
-        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
-          Precision tools for{" "}
-          <span className="text-accent">industrial software</span>
+        <h1 className="font-mono font-bold text-2xl sm:text-3xl mb-2">
+          Studio Seventeen
         </h1>
-        <p className="text-text-muted text-lg sm:text-xl max-w-2xl mb-10">
-          We build focused, reliable software for engineers who need tools that
-          work — every time, in every environment.
+        <p className="text-text text-base mb-6">
+          Precision tools for industrial software.
         </p>
-        <Link
-          href="/projects"
-          className="inline-block bg-accent text-white font-heading font-medium px-6 py-3 rounded hover:bg-accent/90 transition-colors"
+        <div
+          className="bg-[#111111] border border-[#222222] rounded-md p-4 font-mono text-sm mb-6 max-w-xl"
+          role="img"
+          aria-label="Terminal demo: modmapper convert registers.csv --format json"
         >
-          View our projects →
+          <p className="text-text-muted mb-3">
+            modmapper convert registers.csv --format json
+          </p>
+          <div className="text-text space-y-1 pl-2">
+            <p>Parsed 847 Modbus registers</p>
+            <p>Validated address ranges (0x0000-0x034E)</p>
+            <p>Generated registers.json (42 KB)</p>
+          </div>
+          <p className="text-text-muted mt-3 pl-2">Done in 0.3s</p>
+        </div>
+        <Link href="/projects" className="text-accent hover:underline text-sm">
+          Explore our tools →
         </Link>
       </div>
     </section>

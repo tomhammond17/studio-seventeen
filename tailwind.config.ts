@@ -9,10 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0D0D0D",
-        text: "#F5F5F5",
-        "text-muted": "#A0A0A0",
+        bg: "#0a0a0a",
+        text: "#E5E5E5",
+        "text-muted": "#666666",
         accent: "#E85D26",
+        terminal: "#111111",
+        "terminal-border": "#222222",
       },
       fontFamily: {
         heading: ["var(--font-space-grotesk)", "sans-serif"],

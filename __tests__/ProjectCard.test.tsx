@@ -36,7 +36,7 @@ describe("ProjectCard", () => {
 
   it("renders status badge", () => {
     render(<ProjectCard project={liveProject} />);
-    expect(screen.getByText("Live")).toBeInTheDocument();
+    expect(screen.getByText("[LIVE]")).toBeInTheDocument();
   });
 
   it("renders a link when url is provided", () => {
@@ -54,11 +54,11 @@ describe("ProjectCard", () => {
 
   it("renders Beta status correctly", () => {
     render(<ProjectCard project={betaProject} />);
-    expect(screen.getByText("Beta")).toBeInTheDocument();
+    expect(screen.getByText("[BETA]")).toBeInTheDocument();
   });
 
   it("renders Coming soon status correctly", () => {
     render(<ProjectCard project={comingSoonProject} />);
-    expect(screen.getByText("Coming soon")).toBeInTheDocument();
+    expect(screen.getByText("[SOON]")).toBeInTheDocument();
   });
 });

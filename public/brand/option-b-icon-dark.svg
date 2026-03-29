@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#0D0D0D"/>
+  
+  <circle cx="256" cy="256" r="184" fill="#151413" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+  <line x1="174" y1="136" x2="256" y2="366" stroke="#F5F1EB" stroke-width="28" stroke-linecap="round"/>
+  <line x1="338" y1="136" x2="256" y2="366" stroke="#E85D26" stroke-width="28" stroke-linecap="round"/>
+  <line x1="354" y1="136" x2="354" y2="366" stroke="#F5F1EB" stroke-width="18" stroke-linecap="round"/>
+  <line x1="402" y1="136" x2="402" y2="366" stroke="#F5F1EB" stroke-width="18" stroke-linecap="round"/>
+  <text x="118" y="416" fill="#9E948A" font-family="'Inter', sans-serif" font-size="24" letter-spacing="7">XVII</text>
+
+</svg>

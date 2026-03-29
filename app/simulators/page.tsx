@@ -30,9 +30,8 @@ const simulators = [
       "3 operating modes (auto / manual / islanded)",
     ],
     useCases: ["HMI testing", "SCADA regression suites", "Operator training"],
-    // TODO(STU-30): Replace with real demo URL once demo deploy lands (STU-24 Phase 2)
-    demoUrl: null,
-    githubUrl: "https://github.com/studioseventeen/generator-fleet-simulator",
+    githubUrl: "https://github.com/tomhammond17/generator-fleet-simulator",
+    dockerRun: "git clone https://github.com/tomhammond17/generator-fleet-simulator\ncd generator-fleet-simulator\npip install -r requirements.txt\npython main.py",
   },
   {
     id: "bess",
@@ -52,9 +51,8 @@ const simulators = [
       "EMS development",
       "BESS operator training",
     ],
-    // TODO(STU-30): Replace with real demo URL once demo deploy lands (STU-24 Phase 2)
-    demoUrl: null,
-    githubUrl: "https://github.com/studioseventeen/bess-simulator",
+    githubUrl: "https://github.com/tomhammond17/BESS-Simulator",
+    dockerRun: "git clone https://github.com/tomhammond17/BESS-Simulator\ncd BESS-Simulator\npip install -r requirements.txt\npython main.py",
   },
   {
     id: "pv",
@@ -74,9 +72,8 @@ const simulators = [
       "EMS development",
       "Curtailment logic validation",
     ],
-    // TODO(STU-30): Replace with real demo URL once demo deploy lands (STU-24 Phase 2)
-    demoUrl: null,
-    githubUrl: "https://github.com/studioseventeen/pv-simulator",
+    githubUrl: "https://github.com/tomhammond17/PV-Simulator",
+    dockerRun: "git clone https://github.com/tomhammond17/PV-Simulator\ncd PV-Simulator\npip install -r requirements.txt\npython main.py",
   },
 ];
 
@@ -92,7 +89,7 @@ const pricingTiers = [
       "Community support (GitHub Issues)",
     ],
     cta: "View on GitHub",
-    ctaHref: "https://github.com/studioseventeen",
+    ctaHref: "https://github.com/tomhammond17",
     accent: false,
   },
   {
@@ -157,20 +154,20 @@ export default function SimulatorsPage() {
             required.
           </p>
           <div className="flex flex-wrap gap-3">
+            <a
+              href="https://github.com/tomhammond17"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
+            >
+              Browse on GitHub →
+            </a>
             <Link
               href="/contact"
-              className="font-mono text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
+              className="font-mono text-sm border border-white/20 text-text px-4 py-2 rounded hover:border-white/40 transition-colors"
             >
               Get your own instance →
             </Link>
-            <a
-              href="https://github.com/studioseventeen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-sm border border-white/20 text-text px-4 py-2 rounded hover:border-white/40 transition-colors"
-            >
-              View on GitHub →
-            </a>
           </div>
         </div>
       </section>
@@ -219,28 +216,32 @@ export default function SimulatorsPage() {
 
                     {/* CTAs */}
                     <div className="flex flex-wrap gap-3 mt-auto pt-2">
-                      {sim.demoUrl ? (
-                        <a
-                          href={sim.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-mono text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
-                        >
-                          Try the live demo →
-                        </a>
-                      ) : (
-                        <span className="font-mono text-xs text-text-muted border border-white/10 px-4 py-2 rounded">
-                          [demo coming soon]
-                        </span>
-                      )}
                       <a
                         href={sim.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-mono text-sm text-accent hover:underline"
+                        className="font-mono text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
                       >
                         View on GitHub →
                       </a>
+                      <Link
+                        href="/contact"
+                        className="font-mono text-sm border border-white/20 text-text px-4 py-2 rounded hover:border-white/40 transition-colors"
+                      >
+                        Get your own instance →
+                      </Link>
+                    </div>
+
+                    {/* Docker quickstart */}
+                    <div className="bg-terminal border border-terminal-border rounded-md p-3 mt-2">
+                      <p className="font-mono text-xs text-accent mb-2">
+                        [quickstart]
+                      </p>
+                      {sim.dockerRun.split("\n").map((line, i) => (
+                        <p key={i} className="font-mono text-xs text-text-muted">
+                          {line}
+                        </p>
+                      ))}
                     </div>
                   </div>
 
@@ -340,7 +341,7 @@ export default function SimulatorsPage() {
             </p>
             <div className="bg-[#0a0a0a] border border-white/10 rounded-md p-3 font-mono text-sm max-w-lg mb-4">
               <p className="text-text-muted">
-                git clone https://github.com/studioseventeen/generator-fleet-simulator
+                git clone https://github.com/tomhammond17/generator-fleet-simulator
               </p>
               <p className="text-text-muted mt-1">
                 cd generator-fleet-simulator && pip install -r requirements.txt
@@ -351,7 +352,7 @@ export default function SimulatorsPage() {
               </p>
             </div>
             <a
-              href="https://github.com/studioseventeen"
+              href="https://github.com/tomhammond17"
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-sm text-accent hover:underline"

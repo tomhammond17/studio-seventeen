@@ -2,7 +2,7 @@ import Link from "next/link";
 import NavMobileMenu from "./NavMobileMenu";
 
 const navLinks = [
-  { href: "/simulators", label: "Simulators" },
+  { href: "/projects", label: "Products" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

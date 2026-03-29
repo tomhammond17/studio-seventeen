@@ -58,7 +58,7 @@ export default function AboutPage() {
               matter in the physical world, reach out at{" "}
               <a
                 href="mailto:hello@studioseventeen.com"
-                className="text-accent hover:underline"
+                className="text-accent underline"
               >
                 hello@studioseventeen.com
               </a>

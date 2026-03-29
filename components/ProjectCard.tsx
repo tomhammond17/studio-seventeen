@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="flex flex-col gap-3 p-4 border border-white/10 rounded-lg hover:border-white/20 transition-colors">
       <div className="flex items-start justify-between gap-4">
-        <h3 className="font-heading font-semibold text-text">{name}</h3>
+        <h2 className="font-heading font-semibold text-text">{name}</h2>
         <span
           className={`font-mono text-xs whitespace-nowrap ${statusStyles[status]}`}
         >

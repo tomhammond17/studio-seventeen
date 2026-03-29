@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         bg: "#0a0a0a",
         text: "#E5E5E5",
-        "text-muted": "#666666",
+        "text-muted": "#888888",
         accent: "#E85D26",
         terminal: "#111111",
         "terminal-border": "#222222",

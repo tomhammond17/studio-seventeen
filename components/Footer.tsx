@@ -8,7 +8,7 @@ export default function Footer() {
             href="https://github.com/studio-seventeen"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-text transition-colors"
+            className="underline hover:text-text transition-colors"
           >
             GitHub
           </a>

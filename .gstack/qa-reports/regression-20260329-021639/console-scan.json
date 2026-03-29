@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-29T06:16:39.770Z",
+  "base": "http://localhost:3000",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "route": "/projects",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": []
+    }
+  ],
+  "contactSubmit": {
+    "finalUrl": "http://localhost:3000/contact",
+    "successVisible": false,
+    "failureVisible": false,
+    "rateLimitedVisible": false,
+    "errors": [
+      {
+        "type": "console",
+        "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      }
+    ]
+  }
+}

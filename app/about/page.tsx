@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="py-10 sm:py-12">
+    <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-content px-6 max-w-2xl">
-        <h1 className="font-heading text-xl sm:text-2xl font-semibold mb-8">
-          About Studio Seventeen
+        <h1 className="font-heading text-2xl sm:text-3xl font-semibold mb-10">
+          About
         </h1>
 
         <div className="space-y-10">
           <div>
-            <h2 className="font-heading text-xl font-semibold mb-3">
+            <h2 className="font-heading text-base font-semibold mb-3">
               The founder
             </h2>
             <p className="text-text-muted leading-relaxed">
@@ -28,7 +28,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold mb-3">
+            <h2 className="font-heading text-base font-semibold mb-3">
               Our mission
             </h2>
             <p className="text-text-muted leading-relaxed">
@@ -46,7 +46,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold mb-3">Hiring</h2>
+            <h2 className="font-heading text-base font-semibold mb-3">Hiring</h2>
             <p className="text-text-muted leading-relaxed">
               We hire slowly and deliberately. When we do hire, we look for
               engineers who care deeply about correctness, who have experience

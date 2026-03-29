@@ -1,0 +1,35 @@
+{
+  "date": "2026-03-29",
+  "url": "http://localhost:3000",
+  "healthScore": 81,
+  "issues": [
+    {
+      "id": "ISSUE-001",
+      "title": "Client runtime blocked by CSP (unsafe-eval denied)",
+      "severity": "critical",
+      "category": "functional-console"
+    },
+    {
+      "id": "ISSUE-002",
+      "title": "Contact form submits as URL query string instead of async API flow",
+      "severity": "medium",
+      "category": "functional-ux"
+    },
+    {
+      "id": "ISSUE-003",
+      "title": "Automated test suite failing in contact API tests",
+      "severity": "high",
+      "category": "reliability-test"
+    }
+  ],
+  "categoryScores": {
+    "console": 40,
+    "links": 100,
+    "visual": 100,
+    "functional": 75,
+    "ux": 92,
+    "performance": 100,
+    "content": 100,
+    "accessibility": 100
+  }
+}

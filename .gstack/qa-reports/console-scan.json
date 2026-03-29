@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-03-29T04:11:10.901Z",
+  "base": "http://localhost:3000",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "errors": [
+        {
+          "type": "pageerror",
+          "text": "EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline'\".\n"
+        }
+      ]
+    },
+    {
+      "route": "/projects",
+      "status": 200,
+      "errors": [
+        {
+          "type": "pageerror",
+          "text": "EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline'\".\n"
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "errors": [
+        {
+          "type": "pageerror",
+          "text": "EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline'\".\n"
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": [
+        {
+          "type": "pageerror",
+          "text": "EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline'\".\n"
+        }
+      ]
+    }
+  ],
+  "contactSubmit": {
+    "successVisible": false,
+    "failureVisible": false,
+    "rateLimitedVisible": false,
+    "errors": [
+      {
+        "type": "pageerror",
+        "text": "EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline'\".\n"
+      },
+      {
+        "type": "pageerror",
+        "text": "EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline'\".\n"
+      }
+    ]
+  }
+}

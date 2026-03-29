@@ -1,11 +1,5 @@
 import type { Project } from "@/data/projects";
 
-const statusLabels: Record<Project["status"], string> = {
-  Live: "[LIVE]",
-  Beta: "[BETA]",
-  "Coming soon": "[SOON]",
-};
-
 const statusStyles: Record<Project["status"], string> = {
   Live: "text-accent",
   Beta: "text-yellow-400",
@@ -20,16 +14,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const { name, description, status, url } = project;
 
   return (
-    <article className="flex flex-col gap-3 p-4 border border-white/10 rounded-lg hover:border-white/20 transition-colors">
-      <div className="flex items-start justify-between gap-4">
-        <h2 className="font-heading font-semibold text-text">{name}</h2>
+    <article className="flex flex-col gap-2 p-4 border border-white/10 rounded-lg hover:border-white/20 transition-colors">
+      <div className="flex items-baseline justify-between gap-3">
+        <h2 className="font-heading font-semibold text-sm text-text">{name}</h2>
         <span
-          className={`font-mono text-xs whitespace-nowrap ${statusStyles[status]}`}
+          className={`text-xs uppercase tracking-wide ${statusStyles[status]}`}
         >
-          {statusLabels[status]}
+          {status}
         </span>
       </div>
-      <p className="text-text-muted text-sm leading-relaxed flex-1">
+      <p className="text-text-muted text-xs leading-relaxed flex-1">
         {description}
       </p>
       {url && (
@@ -37,9 +31,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent text-sm hover:underline mt-auto"
+          className="text-accent text-xs hover:underline mt-auto"
         >
-          Visit project →
+          Visit →
         </a>
       )}
     </article>

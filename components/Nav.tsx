@@ -2,27 +2,29 @@ import Link from "next/link";
 import NavMobileMenu from "./NavMobileMenu";
 
 const navLinks = [
-  { href: "/projects", label: "tools" },
-  { href: "/simulators", label: "simulators" },
-  { href: "/about", label: "about" },
-  { href: "/contact", label: "contact" },
+  { href: "/simulators", label: "Simulators" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
   return (
-    <nav className="border-b border-white/10 relative">
-      <div className="mx-auto max-w-content px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="font-mono font-bold text-text">
-          S17
+    <nav className="border-b border-white/5">
+      <div className="mx-auto max-w-content px-6 py-4 flex items-center justify-between">
+        <Link
+          href="/"
+          className="font-heading font-semibold text-sm text-text hover:text-accent transition-colors"
+        >
+          Studio Seventeen
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex gap-4">
+        <ul className="hidden md:flex gap-6">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className="font-mono text-sm text-text opacity-60 hover:opacity-100 transition-opacity"
+                className="text-sm text-text-muted hover:text-text transition-colors"
               >
                 {label}
               </Link>

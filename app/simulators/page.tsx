@@ -20,7 +20,7 @@ const simulators = [
     id: "generator",
     name: "Generator Fleet Simulator",
     headline:
-      "Simulate 2,000 diesel generators with realistic state machines, alarms, and Modbus TCP — instantly.",
+      "Simulate 2,000 diesel generators with realistic state machines, alarms, and Modbus TCP.",
     description:
       "A fully scriptable generator fleet with per-unit state machines, 21 Modbus registers per unit, 30 injectable fault types, and three operating modes. Runs locally in seconds.",
     specs: [
@@ -31,7 +31,8 @@ const simulators = [
     ],
     useCases: ["HMI testing", "SCADA regression suites", "Operator training"],
     githubUrl: "https://github.com/tomhammond17/generator-fleet-simulator",
-    dockerRun: "git clone https://github.com/tomhammond17/generator-fleet-simulator\ncd generator-fleet-simulator\npip install -r requirements.txt\npython main.py",
+    quickstart:
+      "git clone https://github.com/tomhammond17/generator-fleet-simulator\ncd generator-fleet-simulator\npip install -r requirements.txt\npython main.py",
   },
   {
     id: "bess",
@@ -52,7 +53,8 @@ const simulators = [
       "BESS operator training",
     ],
     githubUrl: "https://github.com/tomhammond17/BESS-Simulator",
-    dockerRun: "git clone https://github.com/tomhammond17/BESS-Simulator\ncd BESS-Simulator\npip install -r requirements.txt\npython main.py",
+    quickstart:
+      "git clone https://github.com/tomhammond17/BESS-Simulator\ncd BESS-Simulator\npip install -r requirements.txt\npython main.py",
   },
   {
     id: "pv",
@@ -73,13 +75,14 @@ const simulators = [
       "Curtailment logic validation",
     ],
     githubUrl: "https://github.com/tomhammond17/PV-Simulator",
-    dockerRun: "git clone https://github.com/tomhammond17/PV-Simulator\ncd PV-Simulator\npip install -r requirements.txt\npython main.py",
+    quickstart:
+      "git clone https://github.com/tomhammond17/PV-Simulator\ncd PV-Simulator\npip install -r requirements.txt\npython main.py",
   },
 ];
 
 const pricingTiers = [
   {
-    name: "[FREE]",
+    name: "Free",
     price: "$0",
     label: "Self-hosted",
     features: [
@@ -93,7 +96,7 @@ const pricingTiers = [
     accent: false,
   },
   {
-    name: "[PRO]",
+    name: "Pro",
     price: "$29–49/mo",
     label: "Per simulator",
     features: [
@@ -107,7 +110,7 @@ const pricingTiers = [
     accent: true,
   },
   {
-    name: "[TEAM]",
+    name: "Team",
     price: "$99–149/mo",
     label: "All 3 simulators",
     features: [
@@ -121,7 +124,7 @@ const pricingTiers = [
     accent: false,
   },
   {
-    name: "[ENTERPRISE]",
+    name: "Enterprise",
     price: "Custom",
     label: "On-premise or dedicated",
     features: [
@@ -140,40 +143,36 @@ export default function SimulatorsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-12 sm:py-16">
+      <section className="py-14 sm:py-16">
         <div className="mx-auto max-w-content px-6">
-          <p className="font-mono text-xs text-accent mb-3">
-            [industrial simulation suite]
-          </p>
-          <h1 className="font-heading font-bold text-2xl sm:text-3xl text-text mb-4 max-w-2xl">
+          <h1 className="font-heading font-bold text-2xl sm:text-3xl text-text mb-3 max-w-2xl">
             Test your industrial power software without hardware.
           </h1>
-          <p className="text-text-muted text-base max-w-xl mb-8">
+          <p className="text-text-muted text-sm max-w-xl mb-8">
             Three open-source Modbus/SCADA simulators — Generator Fleet, BESS,
-            and PV — ready to run locally or as hosted instances. No hardware
-            required.
+            and PV — ready to run locally or as hosted instances.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="https://github.com/tomhammond17"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
+              className="text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
             >
               Browse on GitHub →
             </a>
             <Link
               href="/contact"
-              className="font-mono text-sm border border-white/20 text-text px-4 py-2 rounded hover:border-white/40 transition-colors"
+              className="text-sm border border-white/20 text-text px-4 py-2 rounded hover:border-white/40 transition-colors"
             >
-              Get your own instance →
+              Get a hosted instance →
             </Link>
           </div>
         </div>
       </section>
 
       {/* Simulator Cards */}
-      <section className="py-12">
+      <section className="pb-16">
         <div className="mx-auto max-w-content px-6">
           <div className="flex flex-col gap-8">
             {simulators.map((sim) => (
@@ -182,31 +181,25 @@ export default function SimulatorsPage() {
                 className="border border-white/10 rounded-lg p-6 hover:border-white/20 transition-colors"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {/* Left: content */}
                   <div className="flex flex-col gap-4">
                     <div>
                       <h2 className="font-heading font-semibold text-text text-lg mb-2">
                         {sim.name}
                       </h2>
                       <p className="text-text-muted text-sm leading-relaxed">
-                        {sim.headline}
+                        {sim.description}
                       </p>
                     </div>
 
-                    <p className="text-text-muted text-sm leading-relaxed">
-                      {sim.description}
-                    </p>
-
-                    {/* Use cases */}
                     <div>
-                      <p className="font-mono text-xs text-accent mb-2">
-                        [use cases]
+                      <p className="text-xs text-text-muted uppercase tracking-wide mb-2">
+                        Use cases
                       </p>
                       <ul className="flex flex-wrap gap-2">
                         {sim.useCases.map((uc) => (
                           <li
                             key={uc}
-                            className="font-mono text-xs text-text-muted border border-white/10 px-2 py-1 rounded"
+                            className="text-xs text-text-muted border border-white/10 px-2 py-1 rounded"
                           >
                             {uc}
                           </li>
@@ -214,49 +207,49 @@ export default function SimulatorsPage() {
                       </ul>
                     </div>
 
-                    {/* CTAs */}
                     <div className="flex flex-wrap gap-3 mt-auto pt-2">
                       <a
                         href={sim.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-mono text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
+                        className="text-sm bg-accent text-white px-4 py-2 rounded hover:bg-accent/90 transition-colors"
                       >
                         View on GitHub →
                       </a>
                       <Link
                         href="/contact"
-                        className="font-mono text-sm border border-white/20 text-text px-4 py-2 rounded hover:border-white/40 transition-colors"
+                        className="text-sm border border-white/20 text-text px-4 py-2 rounded hover:border-white/40 transition-colors"
                       >
-                        Get your own instance →
+                        Get hosted →
                       </Link>
                     </div>
 
-                    {/* Docker quickstart */}
-                    <div className="bg-terminal border border-terminal-border rounded-md p-3 mt-2">
-                      <p className="font-mono text-xs text-accent mb-2">
-                        [quickstart]
+                    <div className="bg-terminal border border-terminal-border rounded p-3 mt-2">
+                      <p className="text-xs text-text-muted uppercase tracking-wide mb-2">
+                        Quickstart
                       </p>
-                      {sim.dockerRun.split("\n").map((line, i) => (
-                        <p key={i} className="font-mono text-xs text-text-muted">
+                      {sim.quickstart.split("\n").map((line, i) => (
+                        <p
+                          key={i}
+                          className="font-mono text-xs text-text-muted"
+                        >
                           {line}
                         </p>
                       ))}
                     </div>
                   </div>
 
-                  {/* Right: specs */}
-                  <div className="bg-terminal border border-terminal-border rounded-md p-4">
-                    <p className="font-mono text-xs text-accent mb-3">
-                      [specs]
+                  <div className="bg-terminal border border-terminal-border rounded p-4">
+                    <p className="text-xs text-text-muted uppercase tracking-wide mb-3">
+                      Specs
                     </p>
                     <ul className="space-y-2">
                       {sim.specs.map((spec) => (
                         <li
                           key={spec}
-                          className="font-mono text-sm text-text flex items-start gap-2"
+                          className="text-sm text-text flex items-start gap-2"
                         >
-                          <span className="text-text-muted mt-0.5">›</span>
+                          <span className="text-text-muted mt-0.5">·</span>
                           <span>{spec}</span>
                         </li>
                       ))}
@@ -270,7 +263,7 @@ export default function SimulatorsPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-12 border-t border-white/10">
+      <section className="py-16 border-t border-white/5">
         <div className="mx-auto max-w-content px-6">
           <h2 className="font-heading font-semibold text-text text-xl mb-2">
             Pricing
@@ -290,15 +283,13 @@ export default function SimulatorsPage() {
                 }`}
               >
                 <div>
-                  <p className="font-mono text-xs text-accent mb-1">
+                  <p className="text-xs text-accent font-medium uppercase tracking-wide mb-1">
                     {tier.name}
                   </p>
                   <p className="font-heading font-bold text-text text-xl">
                     {tier.price}
                   </p>
-                  <p className="font-mono text-xs text-text-muted">
-                    {tier.label}
-                  </p>
+                  <p className="text-xs text-text-muted">{tier.label}</p>
                 </div>
                 <ul className="flex flex-col gap-2 flex-1">
                   {tier.features.map((f) => (
@@ -306,14 +297,14 @@ export default function SimulatorsPage() {
                       key={f}
                       className="text-text-muted text-xs flex items-start gap-2"
                     >
-                      <span className="text-accent mt-0.5">›</span>
+                      <span className="text-text-muted mt-0.5">·</span>
                       <span>{f}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={tier.ctaHref}
-                  className={`font-mono text-xs text-center px-3 py-2 rounded transition-colors ${
+                  className={`text-xs text-center px-3 py-2 rounded transition-colors ${
                     tier.accent
                       ? "bg-accent text-white hover:bg-accent/90"
                       : "border border-white/20 text-text hover:border-white/40"
@@ -328,38 +319,39 @@ export default function SimulatorsPage() {
       </section>
 
       {/* Open source CTA */}
-      <section className="py-12 border-t border-white/10">
+      <section className="py-16 border-t border-white/5">
         <div className="mx-auto max-w-content px-6">
-          <div className="bg-terminal border border-terminal-border rounded-lg p-6">
-            <p className="font-mono text-xs text-accent mb-2">[open source]</p>
-            <h2 className="font-heading font-semibold text-text text-lg mb-2">
-              Start free. Self-host in minutes.
-            </h2>
-            <p className="text-text-muted text-sm mb-4 max-w-lg">
-              All three simulators are MIT-licensed. Clone, run, and test
-              against real Modbus TCP today — no account required.
+          <h2 className="font-heading font-semibold text-text text-lg mb-2">
+            Start free. Self-host in minutes.
+          </h2>
+          <p className="text-text-muted text-sm mb-4 max-w-lg">
+            All three simulators are MIT-licensed. Clone, run, and test against
+            real Modbus TCP — no account required.
+          </p>
+          <div className="bg-terminal border border-terminal-border rounded p-3 font-mono text-xs max-w-lg mb-4 leading-relaxed">
+            <p className="text-text-muted">
+              <span className="text-text">$</span> git clone
+              https://github.com/tomhammond17/generator-fleet-simulator
             </p>
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-md p-3 font-mono text-sm max-w-lg mb-4">
-              <p className="text-text-muted">
-                git clone https://github.com/tomhammond17/generator-fleet-simulator
-              </p>
-              <p className="text-text-muted mt-1">
-                cd generator-fleet-simulator && pip install -r requirements.txt
-              </p>
-              <p className="text-text-muted mt-1">python app.py</p>
-              <p className="text-accent mt-2">
-                Modbus TCP ready on 0.0.0.0:5020
-              </p>
-            </div>
-            <a
-              href="https://github.com/tomhammond17"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-sm text-accent hover:underline"
-            >
-              Browse all repos on GitHub →
-            </a>
+            <p className="text-text-muted">
+              <span className="text-text">$</span> cd
+              generator-fleet-simulator && pip install -r requirements.txt
+            </p>
+            <p className="text-text-muted">
+              <span className="text-text">$</span> python main.py
+            </p>
+            <p className="text-accent mt-2">
+              Modbus TCP ready on 0.0.0.0:5020
+            </p>
           </div>
+          <a
+            href="https://github.com/tomhammond17"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-accent hover:underline"
+          >
+            Browse all repos on GitHub →
+          </a>
         </div>
       </section>
     </>

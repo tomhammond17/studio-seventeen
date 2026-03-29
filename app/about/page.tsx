@@ -8,57 +8,73 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="py-14 sm:py-16">
-      <div className="mx-auto max-w-content px-6 max-w-2xl">
-        <h1 className="font-heading text-2xl sm:text-3xl font-semibold mb-10">
-          About
-        </h1>
+    <section className="py-16 sm:py-20">
+      <div className="mx-auto max-w-content px-6">
+        <div className="max-w-copy">
+          <p className="text-sm uppercase tracking-[0.24em] text-accent-soft">
+            About
+          </p>
+          <h1 className="mt-4 font-heading text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+            An independent studio for industrial software.
+          </h1>
+          <p className="mt-5 text-base leading-7 text-text-muted sm:text-lg">
+            We build focused products for engineers who work in environments
+            where failures are expensive, debugging time is limited, and the
+            software still has to earn trust every day.
+          </p>
+        </div>
 
-        <div className="space-y-10">
-          <div>
-            <h2 className="font-heading text-base font-semibold mb-3">
-              The founder
-            </h2>
-            <p className="text-text-muted leading-relaxed">
-              [Founder bio placeholder — the founder will provide details about
-              their background in industrial software, what drove them to start
-              Studio Seventeen, and their philosophy on building tools that work
-              in real environments.]
+        <div className="mt-12 grid gap-12 border-t border-white/6 pt-10 lg:grid-cols-[220px_minmax(0,1fr)]">
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">
+            The founder
+          </h2>
+          <div className="max-w-2xl space-y-4">
+            <p className="text-base leading-7 text-text-muted">
+              Studio Seventeen is founder-led and deliberately small. That
+              keeps product decisions close to the engineering work, the
+              operational realities, and the people who actually need the tool.
+            </p>
+            <p className="text-base leading-7 text-text-soft">
+              The studio stays focused on practical software that reduces
+              manual operations, clarifies failure modes, and holds up once it
+              leaves the demo environment.
             </p>
           </div>
+        </div>
 
-          <div>
-            <h2 className="font-heading text-base font-semibold mb-3">
-              Our mission
-            </h2>
-            <p className="text-text-muted leading-relaxed">
-              Industrial software is underserved. The tools engineers rely on
-              were built decades ago, ship on decade-old assumptions, and break
-              in environments where failure isn&apos;t an option. We build
-              focused replacements — small, sharp tools that do one thing
-              extremely well and work reliably in every environment they&apos;re
-              deployed to.
+        <div className="mt-12 grid gap-12 border-t border-white/6 pt-10 lg:grid-cols-[220px_minmax(0,1fr)]">
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">
+            Our mission
+          </h2>
+          <div className="max-w-2xl space-y-4">
+            <p className="text-base leading-7 text-text-muted">
+              Industrial software is still full of brittle workflows, aging
+              assumptions, and tools that fall apart outside ideal conditions.
+              We build sharp replacements that solve one real problem well and
+              stay dependable once they leave the demo environment.
             </p>
-            <p className="text-text-muted leading-relaxed mt-3">
-              We are not building a platform. We are not building an ecosystem.
-              We are building tools.
+            <p className="text-base leading-7 text-text-soft">
+              We are not building an ecosystem. We are building tools engineers
+              can reach for with confidence.
             </p>
           </div>
+        </div>
 
-          <div>
-            <h2 className="font-heading text-base font-semibold mb-3">Hiring</h2>
-            <p className="text-text-muted leading-relaxed">
-              We hire slowly and deliberately. When we do hire, we look for
-              engineers who care deeply about correctness, who have experience
-              with industrial or embedded systems, and who are comfortable with
-              ambiguity.
+        <div className="mt-12 grid gap-12 border-t border-white/6 pt-10 lg:grid-cols-[220px_minmax(0,1fr)]">
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">
+            Hiring
+          </h2>
+          <div className="max-w-2xl space-y-4">
+            <p className="text-base leading-7 text-text-muted">
+              We hire slowly. When we do, we look for engineers who care about
+              correctness, enjoy ambiguity, and have respect for the realities
+              of industrial or embedded systems.
             </p>
-            <p className="text-text-muted leading-relaxed mt-3">
-              If that sounds like you and you want to work on problems that
-              matter in the physical world, reach out at{" "}
+            <p className="text-base leading-7 text-text-muted">
+              If that sounds like you, write to{" "}
               <a
                 href="mailto:hello@studioseventeen.io"
-                className="text-accent underline"
+                className="text-accent transition-colors hover:text-accent-soft"
               >
                 hello@studioseventeen.io
               </a>

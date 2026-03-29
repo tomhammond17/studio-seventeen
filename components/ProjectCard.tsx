@@ -14,16 +14,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const { name, description, status, url } = project;
 
   return (
-    <article className="flex flex-col gap-2 p-4 border border-white/10 rounded-lg hover:border-white/20 transition-colors">
+    <article className="flex h-full flex-col gap-4 border-t border-white/10 pt-5 transition-colors hover:border-accent/40">
       <div className="flex items-baseline justify-between gap-3">
-        <h2 className="font-heading font-semibold text-sm text-text">{name}</h2>
+        <h2 className="font-heading text-lg font-semibold text-text">{name}</h2>
         <span
-          className={`text-xs uppercase tracking-wide ${statusStyles[status]}`}
+          className={`text-[0.68rem] uppercase tracking-[0.24em] ${statusStyles[status]}`}
         >
           {status}
         </span>
       </div>
-      <p className="text-text-muted text-xs leading-relaxed flex-1">
+      <p className="flex-1 text-sm leading-7 text-text-muted">
         {description}
       </p>
       {url && (
@@ -31,9 +31,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent text-xs hover:underline mt-auto"
+          className="mt-auto text-sm text-accent transition-colors hover:text-accent-soft"
         >
-          Visit →
+          Visit project
         </a>
       )}
     </article>

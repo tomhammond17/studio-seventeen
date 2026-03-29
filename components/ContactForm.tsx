@@ -58,6 +58,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [serverError, setServerError] = useState<string>("");
+  const [submittedEmail, setSubmittedEmail] = useState<string>("");
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -102,6 +103,7 @@ export default function ContactForm() {
         return;
       }
 
+      setSubmittedEmail(form.email);
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
     } catch {
@@ -114,17 +116,17 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-lg border border-green-800 bg-green-900/20 p-6 text-center">
-        <p className="font-heading font-semibold text-green-400 mb-2">
+      <div className="rounded-[1.5rem] border border-green-500/20 bg-green-500/10 p-6 text-center">
+        <p className="mb-2 font-heading text-xl font-semibold text-green-300">
           Message sent!
         </p>
-        <p className="text-text-muted text-sm">
-          We&apos;ll get back to you at {form.email || "your email"} within a
-          few days.
+        <p className="text-sm text-text-muted">
+          We&apos;ll get back to {submittedEmail || "your inbox"} within a few
+          days.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-4 text-accent text-sm hover:underline"
+          className="mt-4 text-sm text-accent transition-colors hover:text-accent-soft"
         >
           Send another message
         </button>
@@ -133,11 +135,21 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6">
+      <div>
+        <p className="font-heading text-2xl font-semibold text-text">
+          Get in touch
+        </p>
+        <p className="mt-2 text-sm leading-6 text-text-muted">
+          Tell us what you are building and where the workflow is breaking
+          down.
+        </p>
+      </div>
+
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-medium mb-1.5 text-text"
+          className="mb-1.5 block text-sm font-medium text-text"
         >
           Name
         </label>
@@ -148,7 +160,7 @@ export default function ContactForm() {
           value={form.name}
           onChange={handleChange}
           disabled={status === "submitting"}
-          className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-text placeholder:text-text-muted focus:outline-none focus:border-accent disabled:opacity-50 transition-colors"
+          className="w-full rounded-xl border border-white/10 bg-panel px-4 py-3 text-text placeholder:text-text-muted transition-colors focus:border-accent focus:outline-none disabled:opacity-50"
           placeholder="Your name"
           aria-describedby={errors.name ? "name-error" : undefined}
           aria-invalid={!!errors.name}
@@ -163,7 +175,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium mb-1.5 text-text"
+          className="mb-1.5 block text-sm font-medium text-text"
         >
           Email
         </label>
@@ -174,7 +186,7 @@ export default function ContactForm() {
           value={form.email}
           onChange={handleChange}
           disabled={status === "submitting"}
-          className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-text placeholder:text-text-muted focus:outline-none focus:border-accent disabled:opacity-50 transition-colors"
+          className="w-full rounded-xl border border-white/10 bg-panel px-4 py-3 text-text placeholder:text-text-muted transition-colors focus:border-accent focus:outline-none disabled:opacity-50"
           placeholder="you@example.com"
           aria-describedby={errors.email ? "email-error" : undefined}
           aria-invalid={!!errors.email}
@@ -189,7 +201,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="subject"
-          className="block text-sm font-medium mb-1.5 text-text"
+          className="mb-1.5 block text-sm font-medium text-text"
         >
           Subject
         </label>
@@ -200,7 +212,7 @@ export default function ContactForm() {
           value={form.subject}
           onChange={handleChange}
           disabled={status === "submitting"}
-          className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-text placeholder:text-text-muted focus:outline-none focus:border-accent disabled:opacity-50 transition-colors"
+          className="w-full rounded-xl border border-white/10 bg-panel px-4 py-3 text-text placeholder:text-text-muted transition-colors focus:border-accent focus:outline-none disabled:opacity-50"
           placeholder="What's this about?"
           aria-describedby={errors.subject ? "subject-error" : undefined}
           aria-invalid={!!errors.subject}
@@ -215,7 +227,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium mb-1.5 text-text"
+          className="mb-1.5 block text-sm font-medium text-text"
         >
           Message
         </label>
@@ -226,7 +238,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           disabled={status === "submitting"}
-          className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 text-text placeholder:text-text-muted focus:outline-none focus:border-accent disabled:opacity-50 transition-colors resize-y"
+          className="w-full resize-y rounded-xl border border-white/10 bg-panel px-4 py-3 text-text placeholder:text-text-muted transition-colors focus:border-accent focus:outline-none disabled:opacity-50"
           placeholder="Tell us what you're working on..."
           aria-describedby={errors.message ? "message-error" : undefined}
           aria-invalid={!!errors.message}
@@ -247,13 +259,18 @@ export default function ContactForm() {
         </p>
       )}
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        className="bg-accent text-bg font-heading font-medium px-6 py-3 rounded hover:bg-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors self-start"
-      >
-        {status === "submitting" ? "Sending..." : "Send message"}
-      </button>
+      <div className="flex flex-wrap items-center gap-4">
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="self-start rounded-full bg-accent px-6 py-3 font-heading font-medium text-black transition-colors hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {status === "submitting" ? "Sending..." : "Send message"}
+        </button>
+        <p className="text-xs text-text-muted">
+          Prefer email? Reach us directly at hello@studioseventeen.io.
+        </p>
+      </div>
     </form>
   );
 }

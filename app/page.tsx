@@ -114,16 +114,21 @@ export default function HomePage() {
 
                   <div className="border-l border-accent/40 pl-5">
                     <p className="text-xs uppercase tracking-[0.24em] text-accent-soft">
-                      Example output
+                      Why teams keep it open
                     </p>
-                    <div className="mt-4 space-y-2 font-mono text-sm text-text-muted">
+                    <div className="mt-4 space-y-3 text-sm leading-6 text-text-muted">
                       <p>
-                        <span className="text-text">$</span> modmapper convert
-                        registers.csv --format json
+                        One place to clean up inconsistent register maps before
+                        they spread across downstream teams.
                       </p>
-                      <p>Parsed 847 Modbus registers</p>
-                      <p>Validated address ranges (0x0000-0x034E)</p>
-                      <p>Generated registers.json (42 KB) in 0.3s</p>
+                      <p>
+                        Fast validation for address ranges, duplicates, and
+                        export quality before delivery day.
+                      </p>
+                      <p>
+                        Output formats that fit the way controls engineers
+                        already work instead of forcing a new workflow.
+                      </p>
                     </div>
                   </div>
 
@@ -139,7 +144,7 @@ export default function HomePage() {
               </article>
             )}
 
-            <article className="flex flex-col justify-between border-t border-white/10 pt-7 lg:pl-4">
+            <article className="flex flex-col justify-between border-t border-white/10 pt-7 lg:pl-6">
               <div>
                 <p className="text-sm uppercase tracking-[0.24em] text-accent-soft">
                   Simulation suite

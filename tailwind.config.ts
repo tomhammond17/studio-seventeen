@@ -9,12 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0a0a0a",
-        text: "#E5E5E5",
-        "text-muted": "#888888",
+        bg: "#0D0D0D",
+        surface: "#151413",
+        panel: "#111111",
+        text: "#F5F1EB",
+        "text-soft": "#DDD3C7",
+        "text-muted": "#9E948A",
         accent: "#E85D26",
-        terminal: "#111111",
-        "terminal-border": "#222222",
+        "accent-soft": "#F4B49B",
+        line: "#262220",
+        terminal: "#121212",
+        "terminal-border": "#24201D",
       },
       fontFamily: {
         heading: ["var(--font-space-grotesk)", "sans-serif"],
@@ -23,6 +28,7 @@ const config: Config = {
       },
       maxWidth: {
         content: "1100px",
+        copy: "720px",
       },
     },
   },

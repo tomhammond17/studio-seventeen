@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-white/5">
       <div className="absolute inset-x-0 top-0 h-[34rem] bg-[radial-gradient(circle_at_18%_24%,rgba(232,93,38,0.2),transparent_0_42%),radial-gradient(circle_at_78%_18%,rgba(255,255,255,0.08),transparent_0_28%)]" />
-      <div className="mx-auto grid max-w-content gap-16 px-6 py-20 sm:py-24 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:items-end lg:py-32">
+      <div className="mx-auto grid max-w-content gap-16 px-6 py-20 sm:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:items-end lg:py-32">
         <div className="relative max-w-copy">
           <div className="flex flex-wrap items-center gap-4 text-[0.72rem] uppercase tracking-[0.3em] text-accent-soft">
             <p className="font-medium text-text">Studio Seventeen</p>
@@ -46,17 +46,16 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute inset-0 rounded-[2.5rem] bg-accent/8 blur-3xl" />
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] px-7 py-7 shadow-[0_28px_90px_rgba(0,0,0,0.35)] sm:px-8 sm:py-8">
-            <div className="flex items-center justify-between gap-6 border-b border-white/8 pb-5">
+        <div className="relative lg:pl-10">
+          <div className="absolute inset-y-0 left-0 hidden w-px bg-white/8 lg:block" />
+          <div className="space-y-10 border-t border-white/8 pt-6 lg:border-t-0 lg:pt-0">
+            <div className="flex items-end justify-between gap-6 border-b border-white/8 pb-6">
               <div>
                 <p className="text-[0.72rem] uppercase tracking-[0.28em] text-accent-soft">
                   Working model
                 </p>
                 <p className="mt-3 max-w-sm font-heading text-2xl font-medium leading-tight text-text">
-                  From field data and unstable inputs to dependable operator
-                  tooling.
+                  From unstable field inputs to dependable operator tooling.
                 </p>
               </div>
               <p className="max-w-[8rem] text-right text-xs uppercase tracking-[0.26em] text-text-muted">
@@ -64,33 +63,36 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="space-y-6 py-7">
+            <div className="space-y-7">
               {[
                 {
-                  label: "Map",
-                  detail: "Normalize CSV, XML, JSON, and PDF register formats.",
+                  count: "01",
+                  label: "Map the source",
+                  detail: "Normalize CSV, XML, JSON, and PDF register formats without manual cleanup loops.",
                 },
                 {
-                  label: "Validate",
-                  detail: "Catch gaps, collisions, and inconsistent address ranges.",
+                  count: "02",
+                  label: "Validate the edge cases",
+                  detail: "Catch collisions, gaps, and inconsistent address ranges before they become field bugs.",
                 },
                 {
-                  label: "Deploy",
-                  detail: "Hand teams tooling they can run on laptops, plants, and field sites.",
+                  count: "03",
+                  label: "Ship something teams will keep using",
+                  detail: "Deliver tools that can live on laptops, plant networks, and test environments without friction.",
                 },
-              ].map(({ label, detail }) => (
-                <div key={label} className="grid grid-cols-[auto_1fr] gap-4">
-                  <div className="flex flex-col items-center">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-accent" />
-                    {label !== "Deploy" && (
-                      <span className="mt-3 h-full w-px bg-white/10" />
-                    )}
-                  </div>
-                  <div className="pb-1">
-                    <p className="font-heading text-lg font-medium text-text">
+              ].map(({ count, label, detail }) => (
+                <div
+                  key={label}
+                  className="grid gap-4 border-b border-white/8 pb-7 sm:grid-cols-[auto_1fr]"
+                >
+                  <p className="font-heading text-sm font-medium tracking-[0.24em] text-accent-soft">
+                    {count}
+                  </p>
+                  <div>
+                    <p className="font-heading text-xl font-medium text-text">
                       {label}
                     </p>
-                    <p className="mt-1 text-sm leading-6 text-text-muted">
+                    <p className="mt-2 max-w-md text-sm leading-6 text-text-muted">
                       {detail}
                     </p>
                   </div>
@@ -98,7 +100,7 @@ export default function Hero() {
               ))}
             </div>
 
-            <div className="grid gap-5 border-t border-white/8 pt-5 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <p className="text-[0.72rem] uppercase tracking-[0.26em] text-accent-soft">
                   Domains

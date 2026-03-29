@@ -2,12 +2,16 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { NextRequest } from "next/server";
 
 // Mock Resend
+const mockSend = vi.hoisted(() =>
+  vi.fn().mockResolvedValue({ id: "test-email-id" })
+);
+
 vi.mock("@/lib/resend", () => ({
-  resend: {
+  getResend: vi.fn(() => ({
     emails: {
-      send: vi.fn().mockResolvedValue({ id: "test-email-id" }),
+      send: mockSend,
     },
-  },
+  })),
 }));
 
 // Mock rate limiter to allow all by default
@@ -16,10 +20,9 @@ vi.mock("@/lib/rate-limit", () => ({
 }));
 
 import { POST } from "@/app/api/contact/route";
-import { resend } from "@/lib/resend";
 import { checkRateLimit } from "@/lib/rate-limit";
 
-const mockResendSend = vi.mocked(resend.emails.send);
+const mockResendSend = mockSend;
 const mockCheckRateLimit = vi.mocked(checkRateLimit);
 
 function makeRequest(body: unknown, ip = "127.0.0.1"): NextRequest {
@@ -59,7 +62,7 @@ describe("POST /api/contact", () => {
     expect(mockResendSend).toHaveBeenCalledWith(
       expect.objectContaining({
         to: expect.any(String),
-        replyTo: "test@example.com",
+        reply_to: "test@example.com",
       })
     );
   });

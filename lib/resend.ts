@@ -1,9 +1,13 @@
 import { Resend } from "resend";
 
-if (!process.env.RESEND_API_KEY) {
-  if (process.env.NODE_ENV === "production") {
-    throw new Error("RESEND_API_KEY environment variable is required");
-  }
-}
+let _resend: Resend | null = null;
 
-export const resend = new Resend(process.env.RESEND_API_KEY ?? "re_placeholder");
+export function getResend(): Resend {
+  if (!_resend) {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error("RESEND_API_KEY environment variable is required");
+    }
+    _resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return _resend;
+}

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { resend } from "@/lib/resend";
+import { getResend } from "@/lib/resend";
 import { checkRateLimit } from "@/lib/rate-limit";
 
 function sanitize(value: string): string {
@@ -101,10 +101,10 @@ export async function POST(req: NextRequest) {
   const contactEmail = process.env.CONTACT_EMAIL ?? "hello@studioseventeen.com";
 
   try {
-    await resend.emails.send({
+    await getResend().emails.send({
       from: "Studio Seventeen Contact Form <noreply@studioseventeen.com>",
       to: contactEmail,
-      replyTo: email,
+      reply_to: email,
       subject: `[Contact] ${sanitize(subject)}`,
       html: `
         <h2>New contact form submission</h2>

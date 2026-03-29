@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="py-16">
+    <section className="py-10 sm:py-12">
       <div className="mx-auto max-w-content px-6 max-w-2xl">
-        <h1 className="font-heading text-3xl sm:text-4xl font-semibold mb-10">
+        <h1 className="font-heading text-xl sm:text-2xl font-semibold mb-8">
           About Studio Seventeen
         </h1>
 
@@ -57,10 +57,10 @@ export default function AboutPage() {
               If that sounds like you and you want to work on problems that
               matter in the physical world, reach out at{" "}
               <a
-                href="mailto:hello@studioseventeen.com"
+                href="mailto:hello@studioseventeen.io"
                 className="text-accent underline"
               >
-                hello@studioseventeen.com
+                hello@studioseventeen.io
               </a>
               .
             </p>

@@ -3,6 +3,7 @@ import NavMobileMenu from "./NavMobileMenu";
 
 const navLinks = [
   { href: "/projects", label: "tools" },
+  { href: "/simulators", label: "simulators" },
   { href: "/about", label: "about" },
   { href: "/contact", label: "contact" },
 ];

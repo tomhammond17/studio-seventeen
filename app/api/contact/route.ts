@@ -98,11 +98,11 @@ export async function POST(req: NextRequest) {
 
   const { name, email, subject, message } = validation.data;
 
-  const contactEmail = process.env.CONTACT_EMAIL ?? "hello@studioseventeen.com";
+  const contactEmail = process.env.CONTACT_EMAIL ?? "hello@studioseventeen.io";
 
   try {
     await getResend().emails.send({
-      from: "Studio Seventeen Contact Form <noreply@studioseventeen.com>",
+      from: "Studio Seventeen Contact Form <noreply@studioseventeen.io>",
       to: contactEmail,
       reply_to: email,
       subject: `[Contact] ${sanitize(subject)}`,

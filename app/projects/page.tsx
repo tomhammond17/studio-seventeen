@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <section className="py-16">
+    <section className="py-10 sm:py-12">
       <div className="mx-auto max-w-content px-6">
-        <h1 className="font-heading text-3xl sm:text-4xl font-semibold mb-4">
+        <h1 className="font-heading text-xl sm:text-2xl font-semibold mb-3">
           Projects
         </h1>
-        <p className="text-text-muted mb-10 max-w-xl">
+        <p className="text-text-muted text-sm mb-8 max-w-xl">
           Tools we&apos;ve shipped for industrial software teams. Each one
           solves a specific, real problem.
         </p>

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   description:
     "Precision tools for industrial software engineers. We build focused, reliable software that works in every environment.",
-  metadataBase: new URL("https://studioseventeen.com"),
+  metadataBase: new URL("https://studioseventeen.io"),
 };
 
 export default function RootLayout({

@@ -209,9 +209,9 @@ export default function ProductPage({ params }: ProductPageProps) {
                     >
                       {row.label}
                     </div>
-                    {row.values.map((value) => (
+                    {row.values.map((value, idx) => (
                       <div
-                        key={`${row.label}-${value}`}
+                        key={`${row.label}-${value}-${idx}`}
                         className="bg-bg px-5 py-4 text-sm leading-6 text-text-muted"
                       >
                         {value}

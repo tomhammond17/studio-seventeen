@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -202,9 +203,8 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </div>
                 ))}
                 {product.comparisonTable.rows.map((row) => (
-                  <>
+                  <Fragment key={row.label}>
                     <div
-                      key={`${row.label}-label`}
                       className="bg-bg px-5 py-4 text-sm text-text"
                     >
                       {row.label}
@@ -217,7 +217,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                         {value}
                       </div>
                     ))}
-                  </>
+                  </Fragment>
                 ))}
               </div>
             </div>

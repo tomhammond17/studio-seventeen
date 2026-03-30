@@ -132,14 +132,12 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <a
+                  <Link
                     href={modmapper.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex rounded-full bg-accent px-6 py-3 font-heading text-sm font-medium text-black transition-colors hover:bg-accent/90"
                   >
-                    Visit ModMapper
-                  </a>
+                    View pricing
+                  </Link>
                 </div>
               </article>
             )}
@@ -150,18 +148,18 @@ export default function HomePage() {
                   Simulation suite
                 </p>
                 <h3 className="mt-4 font-heading text-2xl font-semibold text-text">
-                  Open-source test environments for power software teams.
+                  Product pages for simulator licenses and DER bundle pricing.
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-text-muted">
-                  Generator fleets, battery storage, and PV inverter scenarios
-                  for teams that need deterministic SCADA and EMS testing
-                  without live hardware.
+                  Generator, battery, and PV simulators for SCADA and HMI teams
+                  that need realistic Modbus behavior before hardware arrives.
                 </p>
                 <div className="mt-8 space-y-4 border-t border-white/8 pt-6">
                   {[
                     "Generator Fleet Simulator",
                     "BESS Simulator",
                     "PV Simulator",
+                    "DER Toolkit bundle",
                   ].map((name) => (
                     <div key={name} className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-accent" />
@@ -176,16 +174,14 @@ export default function HomePage() {
                   href="/simulators"
                   className="text-sm text-accent transition-colors hover:text-accent-soft"
                 >
-                  View simulator details
+                  Explore simulator pricing
                 </Link>
-                <a
-                  href="https://github.com/tomhammond17"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/products/der-toolkit"
                   className="text-sm text-text-muted transition-colors hover:text-text"
                 >
-                  Browse GitHub
-                </a>
+                  See the DER toolkit
+                </Link>
               </div>
             </article>
           </div>

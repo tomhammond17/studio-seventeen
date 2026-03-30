@@ -14,7 +14,7 @@ export const projects: Project[] = [
     description:
       "Modbus register map converter — automate your CSV ↔ XML ↔ JSON ↔ PDF workflows",
     status: "Live",
-    url: "https://modmapper.io",
+    url: "/products/modmapper",
     slug: "modmapper",
   },
   {
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     description:
       "Simulate 2,000 diesel generators with realistic state machines, alarms, and Modbus TCP — instantly",
     status: "Live",
-    url: "https://github.com/tomhammond17/generator-fleet-simulator",
+    url: "/products/generator-fleet-simulator",
     slug: "generator-fleet-simulator",
   },
   {
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     description:
       "Simulate 100 battery storage units with dispatch logic, SOC tracking, and scenario playback",
     status: "Live",
-    url: "https://github.com/tomhammond17/BESS-Simulator",
+    url: "/products/bess-simulator",
     slug: "bess-simulator",
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description:
       "Simulate 100 solar inverters with real weather data or synthetic solar curves via Modbus TCP",
     status: "Live",
-    url: "https://github.com/tomhammond17/PV-Simulator",
+    url: "/products/pv-simulator",
     slug: "pv-simulator",
   },
 ];

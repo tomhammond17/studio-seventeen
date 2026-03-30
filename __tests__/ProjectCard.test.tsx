@@ -7,7 +7,7 @@ const liveProject: Project = {
   name: "ModMapper",
   description: "Modbus register map converter",
   status: "Live",
-  url: "https://modmapper.io",
+  url: "/products/modmapper",
   slug: "modmapper",
 };
 
@@ -41,10 +41,9 @@ describe("ProjectCard", () => {
 
   it("renders a link when url is provided", () => {
     render(<ProjectCard project={liveProject} />);
-    const link = screen.getByRole("link", { name: /visit project/i });
-    expect(link).toHaveAttribute("href", "https://modmapper.io");
-    expect(link).toHaveAttribute("target", "_blank");
-    expect(link).toHaveAttribute("rel", "noopener noreferrer");
+    const link = screen.getByRole("link", { name: /view details/i });
+    expect(link).toHaveAttribute("href", "/products/modmapper");
+    expect(link).not.toHaveAttribute("target");
   });
 
   it("does not render a link when url is empty", () => {

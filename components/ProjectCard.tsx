@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Project } from "@/data/projects";
 
 const statusStyles: Record<Project["status"], string> = {
@@ -27,14 +28,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {description}
       </p>
       {url && (
-        <a
+        <Link
           href={url}
-          target="_blank"
-          rel="noopener noreferrer"
           className="mt-auto text-sm text-accent transition-colors hover:text-accent-soft"
         >
-          Visit project
-        </a>
+          View details
+        </Link>
       )}
     </article>
   );

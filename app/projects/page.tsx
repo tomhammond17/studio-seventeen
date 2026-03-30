@@ -84,14 +84,12 @@ export default function ProjectsPage() {
                     </div>
                   ))}
                 </div>
-                <a
+                <Link
                   href={modmapper.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="mt-8 inline-flex rounded-full bg-accent px-5 py-2.5 font-heading text-sm font-medium text-black transition-colors hover:bg-accent/90"
                 >
-                  Visit ModMapper
-                </a>
+                  View pricing
+                </Link>
               </div>
             </div>
           </article>
@@ -100,17 +98,17 @@ export default function ProjectsPage() {
         <div className="mt-16 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.24em] text-accent-soft">
-              Open-source simulators
+              Simulator products
             </p>
             <h2 className="mt-3 font-heading text-2xl font-semibold text-text sm:text-3xl">
-              Power-system test environments teams can run locally.
+              Power-system test environments with clear license pricing.
             </h2>
           </div>
           <Link
             href="/simulators"
             className="text-sm text-accent transition-colors hover:text-accent-soft"
           >
-            Full simulator details
+            Full simulator pricing
           </Link>
         </div>
         <ul className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

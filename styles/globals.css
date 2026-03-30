@@ -52,6 +52,72 @@ a {
   text-decoration: none;
 }
 
+.signal-demo {
+  position: relative;
+  overflow: hidden;
+}
+
+.signal-demo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(232, 93, 38, 0.08) 38%,
+    transparent 62%
+  );
+  transform: translateX(-120%);
+  animation: signal-scan 6.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.signal-demo__feed {
+  position: relative;
+}
+
+.signal-demo__row {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  animation: signal-pulse 4.8s ease-in-out infinite;
+}
+
+.signal-demo__row:first-child {
+  border-top: 0;
+}
+
+@keyframes signal-scan {
+  0%,
+  14% {
+    transform: translateX(-120%);
+  }
+
+  50%,
+  64% {
+    transform: translateX(120%);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes signal-pulse {
+  0%,
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  18%,
+  32% {
+    background-color: rgba(232, 93, 38, 0.06);
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+}
+
 ::selection {
   background: rgba(232, 93, 38, 0.35);
 }

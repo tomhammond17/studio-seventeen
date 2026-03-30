@@ -190,35 +190,35 @@ export default function ProductPage({ params }: ProductPageProps) {
             </div>
 
             <div className="mt-10 overflow-hidden rounded-[1.8rem] border border-white/10">
-              <div className="grid grid-cols-[minmax(180px,1.15fr)_repeat(3,minmax(0,1fr))] gap-px bg-white/10">
-                <div className="bg-bg px-5 py-4 text-[0.68rem] uppercase tracking-[0.24em] text-text-muted">
-                  Feature
-                </div>
-                {product.comparisonTable.columns.map((column) => (
-                  <div
-                    key={column}
-                    className="bg-bg px-5 py-4 text-[0.68rem] uppercase tracking-[0.24em] text-accent-soft"
-                  >
-                    {column}
+              <div className="overflow-x-auto">
+                <div className="grid min-w-[560px] grid-cols-[minmax(180px,1.15fr)_repeat(3,minmax(0,1fr))] gap-px bg-white/10 md:min-w-0">
+                  <div className="sticky left-0 z-10 bg-bg px-5 py-4 text-[0.68rem] uppercase tracking-[0.24em] text-text-muted">
+                    Feature
                   </div>
-                ))}
-                {product.comparisonTable.rows.map((row) => (
-                  <Fragment key={row.label}>
+                  {product.comparisonTable.columns.map((column) => (
                     <div
-                      className="bg-bg px-5 py-4 text-sm text-text"
+                      key={column}
+                      className="bg-bg px-5 py-4 text-[0.68rem] uppercase tracking-[0.24em] text-accent-soft"
                     >
-                      {row.label}
+                      {column}
                     </div>
-                    {row.values.map((value, idx) => (
-                      <div
-                        key={`${row.label}-${value}-${idx}`}
-                        className="bg-bg px-5 py-4 text-sm leading-6 text-text-muted"
-                      >
-                        {value}
+                  ))}
+                  {product.comparisonTable.rows.map((row) => (
+                    <Fragment key={row.label}>
+                      <div className="sticky left-0 z-10 bg-bg px-5 py-4 text-sm text-text">
+                        {row.label}
                       </div>
-                    ))}
-                  </Fragment>
-                ))}
+                      {row.values.map((value, idx) => (
+                        <div
+                          key={`${row.label}-${value}-${idx}`}
+                          className="bg-bg px-5 py-4 text-sm leading-6 text-text-muted"
+                        >
+                          {value}
+                        </div>
+                      ))}
+                    </Fragment>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

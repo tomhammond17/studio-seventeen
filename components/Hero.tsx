@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-white/5">
-      <div className="absolute inset-x-0 top-0 h-[34rem] bg-[radial-gradient(circle_at_18%_24%,rgba(232,93,38,0.2),transparent_0_42%),radial-gradient(circle_at_78%_18%,rgba(255,255,255,0.08),transparent_0_28%)]" />
-      <div className="mx-auto grid max-w-content gap-16 px-6 py-20 sm:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:items-end lg:py-32">
+      <div className="absolute inset-x-0 top-0 h-[24rem] bg-[radial-gradient(circle_at_18%_24%,rgba(232,93,38,0.2),transparent_0_42%),radial-gradient(circle_at_78%_18%,rgba(255,255,255,0.08),transparent_0_28%)] sm:h-[30rem] lg:h-[34rem]" />
+      <div className="mx-auto grid max-w-content gap-16 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:items-end lg:py-32">
         <div className="relative max-w-copy">
           <div className="flex flex-wrap items-center gap-4 text-[0.72rem] uppercase tracking-[0.3em] text-accent-soft">
             <p className="font-medium text-text">Studio Seventeen</p>

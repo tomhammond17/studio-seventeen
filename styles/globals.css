@@ -118,6 +118,16 @@ a {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .signal-demo::after {
+    animation: none;
+  }
+
+  .signal-demo__row {
+    animation: none;
+  }
+}
+
 ::selection {
   background: rgba(232, 93, 38, 0.35);
 }

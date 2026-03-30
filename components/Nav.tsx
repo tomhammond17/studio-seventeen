@@ -10,7 +10,7 @@ const navLinks = [
 export default function Nav() {
   return (
     <nav className="sticky top-0 z-20 border-b border-white/5 bg-bg/85 backdrop-blur-2xl">
-      <div className="mx-auto flex max-w-content items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-content items-center justify-between px-4 py-4 sm:px-6">
         <Link
           href="/"
           className="flex items-center gap-3 text-text transition-colors hover:text-accent"

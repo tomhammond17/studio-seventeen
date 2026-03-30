@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-8">
-      <div className="mx-auto flex max-w-content flex-col gap-4 px-6 sm:flex-row sm:items-end sm:justify-between">
+      <div className="mx-auto flex max-w-content flex-col gap-4 px-4 sm:flex-row sm:items-end sm:justify-between sm:px-6">
         <div className="space-y-1">
           <p className="font-heading text-sm font-medium uppercase tracking-[0.22em] text-text">
             Studio Seventeen

@@ -7,7 +7,7 @@
   <line x1="128" y1="336" x2="384" y2="336" stroke="rgba(13,13,13,0.12)" stroke-width="2"/>
   <text x="128" y="162" fill="#5E554D" font-family="'Inter', sans-serif" font-size="24" letter-spacing="6">STUDIO</text>
   <text x="128" y="282" fill="#0D0D0D" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="104" font-weight="700" letter-spacing="-4">S</text>
-  <text x="214" y="282" fill="#E85D26" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="104" font-weight="700" letter-spacing="-4">17</text>
+  <text x="196" y="282" fill="#E85D26" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="82" font-weight="700" letter-spacing="-2">XVII</text>
   <text x="128" y="370" fill="#5E554D" font-family="'Inter', sans-serif" font-size="22" letter-spacing="4">TOOLS</text>
 
 </svg>

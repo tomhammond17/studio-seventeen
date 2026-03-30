@@ -43,7 +43,6 @@ function optionALockup(theme) {
   <line x1="110" y1="408" x2="1490" y2="408" stroke="${theme.line}" stroke-width="2"/>
   <text x="110" y="112" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="32" letter-spacing="10">STUDIO</text>
   <text x="110" y="298" fill="${theme.text}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="168" font-weight="700" letter-spacing="-6">SEVENTEEN</text>
-  <text x="1122" y="298" fill="${theme.accent}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="144" font-weight="700" letter-spacing="-3">XVII</text>
   <text x="110" y="372" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="34" letter-spacing="5">INDUSTRIAL SOFTWARE</text>
   <circle cx="1450" cy="94" r="12" fill="${theme.accent}"/>
 `,
@@ -60,8 +59,8 @@ function optionAIcon(theme) {
   <line x1="128" y1="176" x2="384" y2="176" stroke="${theme.line}" stroke-width="2"/>
   <line x1="128" y1="336" x2="384" y2="336" stroke="${theme.line}" stroke-width="2"/>
   <text x="128" y="162" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="24" letter-spacing="6">STUDIO</text>
-  <text x="128" y="282" fill="${theme.text}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="104" font-weight="700" letter-spacing="-4">S</text>
-  <text x="196" y="282" fill="${theme.accent}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="82" font-weight="700" letter-spacing="-2">XVII</text>
+  <text x="128" y="286" fill="${theme.text}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="84" font-weight="700" letter-spacing="-3">S</text>
+  <text x="194" y="286" fill="${theme.accent}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="84" font-weight="700" letter-spacing="-2">XVII</text>
   <text x="128" y="370" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="22" letter-spacing="4">TOOLS</text>
 `,
   );

@@ -8,6 +8,13 @@ const ContactForm = dynamic(() => import("@/components/ContactForm"), {
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with Studio Seventeen.",
+  openGraph: {
+    title: "Contact | Studio Seventeen",
+    description: "Get in touch with Studio Seventeen.",
+    url: "https://studioseventeen.io/contact",
+    siteName: "Studio Seventeen",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {

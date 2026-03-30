@@ -283,7 +283,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 </h2>
               </div>
               <Link
-                href="/projects"
+                href="/products"
                 className="text-sm text-accent transition-colors hover:text-accent-soft"
               >
                 Back to all products

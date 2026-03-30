@@ -12,7 +12,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex items-center gap-4 text-xs text-text-muted">
-          <span>© 2025 Studio Seventeen</span>
+          <span>© 2026 Studio Seventeen</span>
           <a
             href="mailto:hello@studioseventeen.io"
             className="hover:text-text transition-colors"

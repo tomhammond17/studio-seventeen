@@ -4,14 +4,14 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Products — Modbus register map converter, SCADA Modbus simulator",
   description:
-    "Tools for industrial software engineers — format converters and power system simulators.",
+    "Industrial software tools for format conversion and power system simulation — Modbus register map converter and SCADA Modbus simulator.",
   openGraph: {
-    title: "Projects | Studio Seventeen",
+    title: "Products — Studio Seventeen",
     description:
-      "Tools for industrial software engineers — format converters and power system simulators.",
-    url: "https://studioseventeen.io/projects",
+      "Industrial software tools for format conversion and power system simulation — Modbus register map converter and SCADA Modbus simulator.",
+    url: "https://studioseventeen.io/products",
     siteName: "Studio Seventeen",
     type: "website",
   },
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 const modmapper = projects.find((p) => p.slug === "modmapper");
 const simulators = projects.filter((p) => p.slug !== "modmapper");
 
-export default function ProjectsPage() {
+export default function ProductsPage() {
   return (
     <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-content px-6">
         <div className="max-w-copy">
           <p className="text-sm uppercase tracking-[0.24em] text-accent-soft">
-            Projects
+            Products
           </p>
           <h1 className="mt-4 font-heading text-4xl font-semibold tracking-tight text-text sm:text-5xl">
             Tools built for industrial software teams.

@@ -4,6 +4,14 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Studio Seventeen is an independent software studio building precision tools for industrial engineers.",
+  openGraph: {
+    title: "About | Studio Seventeen",
+    description:
+      "Studio Seventeen is an independent software studio building precision tools for industrial engineers.",
+    url: "https://studioseventeen.io/about",
+    siteName: "Studio Seventeen",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {

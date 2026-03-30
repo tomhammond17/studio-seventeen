@@ -4,7 +4,15 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Studio Seventeen — Industrial software tools",
+  title: "Studio Seventeen — Modbus register map converter & SCADA Modbus simulator",
+  openGraph: {
+    title: "Studio Seventeen — Modbus register map converter & SCADA Modbus simulator",
+    description:
+      "Precision tools for industrial software engineers. We build focused, reliable software that works in every environment.",
+    url: "https://studioseventeen.io",
+    siteName: "Studio Seventeen",
+    type: "website",
+  },
 };
 
 export default function HomePage() {

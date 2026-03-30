@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   description:
     "Precision tools for industrial software engineers. We build focused, reliable software that works in every environment.",
   metadataBase: new URL("https://studioseventeen.io"),
+  openGraph: {
+    siteName: "Studio Seventeen",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({

@@ -73,15 +73,18 @@ function optionBLockup(theme) {
     540,
     theme,
     `
-  <circle cx="266" cy="270" r="154" fill="${theme.surface}" stroke="${theme.line}" stroke-width="3"/>
-  <line x1="196" y1="172" x2="266" y2="366" stroke="${theme.text}" stroke-width="24" stroke-linecap="round"/>
-  <line x1="336" y1="172" x2="266" y2="366" stroke="${theme.accent}" stroke-width="24" stroke-linecap="round"/>
-  <line x1="360" y1="172" x2="360" y2="366" stroke="${theme.text}" stroke-width="16" stroke-linecap="round"/>
-  <line x1="402" y1="172" x2="402" y2="366" stroke="${theme.text}" stroke-width="16" stroke-linecap="round"/>
-  <text x="520" y="212" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="28" letter-spacing="9">MARK SYSTEM</text>
-  <text x="520" y="302" fill="${theme.text}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="126" font-weight="700" letter-spacing="-4">Studio Seventeen</text>
-  <text x="520" y="366" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="34" letter-spacing="4">XVII DERIVED  •  INDUSTRIAL SOFTWARE</text>
-  <line x1="520" y1="392" x2="1466" y2="392" stroke="${theme.line}" stroke-width="2"/>
+  <line x1="110" y1="132" x2="1490" y2="132" stroke="${theme.line}" stroke-width="2"/>
+  <line x1="110" y1="408" x2="1490" y2="408" stroke="${theme.line}" stroke-width="2"/>
+  <rect x="110" y="166" width="236" height="208" rx="42" fill="${theme.surface}" stroke="${theme.line}" stroke-width="3"/>
+  <line x1="176" y1="210" x2="246" y2="330" stroke="${theme.text}" stroke-width="20" stroke-linecap="round"/>
+  <line x1="316" y1="210" x2="246" y2="330" stroke="${theme.accent}" stroke-width="20" stroke-linecap="round"/>
+  <line x1="264" y1="210" x2="264" y2="330" stroke="${theme.text}" stroke-width="12" stroke-linecap="round"/>
+  <line x1="298" y1="210" x2="298" y2="330" stroke="${theme.text}" stroke-width="12" stroke-linecap="round"/>
+  <text x="110" y="112" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="30" letter-spacing="10">ROMAN MARK</text>
+  <text x="412" y="228" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="28" letter-spacing="8">STUDIO</text>
+  <text x="412" y="302" fill="${theme.text}" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="124" font-weight="700" letter-spacing="-4">SEVENTEEN</text>
+  <text x="412" y="372" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="32" letter-spacing="4">XVII DERIVED  •  INDUSTRIAL SOFTWARE</text>
+  <circle cx="1450" cy="94" r="12" fill="${theme.accent}"/>
 `,
   );
 }
@@ -92,12 +95,15 @@ function optionBIcon(theme) {
     512,
     theme,
     `
-  <circle cx="256" cy="256" r="184" fill="${theme.surface}" stroke="${theme.line}" stroke-width="3"/>
-  <line x1="174" y1="136" x2="256" y2="366" stroke="${theme.text}" stroke-width="28" stroke-linecap="round"/>
-  <line x1="338" y1="136" x2="256" y2="366" stroke="${theme.accent}" stroke-width="28" stroke-linecap="round"/>
-  <line x1="354" y1="136" x2="354" y2="366" stroke="${theme.text}" stroke-width="18" stroke-linecap="round"/>
-  <line x1="402" y1="136" x2="402" y2="366" stroke="${theme.text}" stroke-width="18" stroke-linecap="round"/>
-  <text x="118" y="416" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="24" letter-spacing="7">XVII</text>
+  <rect x="72" y="72" width="368" height="368" rx="56" fill="${theme.surface}" stroke="${theme.line}" stroke-width="3"/>
+  <line x1="128" y1="176" x2="384" y2="176" stroke="${theme.line}" stroke-width="2"/>
+  <line x1="128" y1="336" x2="384" y2="336" stroke="${theme.line}" stroke-width="2"/>
+  <text x="128" y="162" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="22" letter-spacing="6">ROMAN</text>
+  <line x1="154" y1="208" x2="224" y2="328" stroke="${theme.text}" stroke-width="22" stroke-linecap="round"/>
+  <line x1="294" y1="208" x2="224" y2="328" stroke="${theme.accent}" stroke-width="22" stroke-linecap="round"/>
+  <line x1="242" y1="208" x2="242" y2="328" stroke="${theme.text}" stroke-width="14" stroke-linecap="round"/>
+  <line x1="276" y1="208" x2="276" y2="328" stroke="${theme.text}" stroke-width="14" stroke-linecap="round"/>
+  <text x="128" y="370" fill="${theme.muted}" font-family="'Inter', sans-serif" font-size="22" letter-spacing="5">XVII</text>
 `,
   );
 }
